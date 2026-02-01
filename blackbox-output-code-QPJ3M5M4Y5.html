@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Snooker & Gym Club</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 2rem;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        section img {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 0.5rem 0;
+        }
+        .book-now {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+        .book-now:hover {
+            background-color: #218838;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Elite Snooker & Gym Club</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#snooker">Snooker Club</a></li>
+                <li><a href="#ladies-gym">Ladies' Gym</a></li>
+                <li><a href="#gents-gym">Gents' Gym</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Elite Snooker & Gym Club</h2>
+        <p>Experience top-notch snooker tables and state-of-the-art gyms, with separate facilities for ladies and gents. Join us for fitness and fun!</p>
+    </section>
+
+    <section id="snooker">
+        <h2>Snooker Club</h2>
+        <p>Our snooker club features professional tables, coaching sessions, and tournaments. Perfect for all skill levels.</p>
+        <img src="https://via.placeholder.com/600x300?text=Snooker+Tables" alt="Snooker Tables">
+        <ul>
+            <li>10 Full-Size Tables</li>
+            <li>Expert Coaching Available</li>
+            <li>Weekly Tournaments</li>
+        </ul>
+        <button class="book-now">Book a Session</button>
+    </section>
+
+    <section id="ladies-gym">
+        <h2>Ladies' Gym</h2>
+        <p>A dedicated, women-only space with cardio machines, weights, yoga classes, and more. Empower your fitness journey in a supportive environment.</p>
+        <img src="https://via.placeholder.com/600x300?text=Ladies+Gym" alt="Ladies' Gym">
+        <ul>
+            <li>Cardio & Strength Equipment</li>
+            <li>Yoga and Pilates Classes</li>
+            <li>Personal Trainers</li>
+        </ul>
+        <button class="book-now">Join Ladies' Gym</button>
+    </section>
+
+    <section id="gents-gym">
+        <h2>Gents' Gym</h2>
+        <p>Our men's gym offers heavy-duty weights, functional training areas, and group sessions tailored for men. Build strength and camaraderie.</p>
+        <img src="https://via.placeholder.com/600x300?text=Gents+Gym" alt="Gents' Gym">
+        <ul>
+            <li>Free Weights & Machines</li>
+            <li>Boxing and MMA Classes</li>
+            <li>Nutrition Guidance</li>
+        </ul>
+        <button class="book-now">Join Gents' Gym</button>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Elite Snooker & Gym Club. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple booking functionality (alerts for demo)
+        document.querySelectorAll('.book-now').forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Booking request submitted! We\'ll contact you soon.');
+                // In a real app, you'd integrate with a booking system or backend
+            });
+        });
+
+        // Form submission (prevents default and logs)
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Message sent!');
+            // In a real app, send data to server
+        });
+    </script>
+</body>
+</html>
